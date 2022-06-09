@@ -1,0 +1,223 @@
+\documentclass[12pt]{report}
+\usepackage{polski}
+\usepackage{float}
+
+% interlinia
+\linespread{1.25}
+
+% marginesy
+\usepackage{geometry}
+\newgeometry{tmargin=3cm, bmargin=3cm, lmargin=2.5cm, rmargin=2.5cm}
+
+% rysunki
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+
+
+% Title Page
+\title{Kompilacja jądra}
+\author{Paweł Nowak}
+
+
+\begin{document}
+\maketitle
+
+
+\chapter{Pobieranie ostatniej stabilnej wersji jądra}
+Została sprawdzona wersja jądra z użyciem komendy \verb|uname --release|. W systemie znajdowało się jądro w wersji \verb|5.15-27-smp|. Korzystając z witryny \verb*|www.kernel.org| sprawdzono najnowszą stabilną wersję jądra (\verb|5.18.3|).
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=12cm]{1_1}
+	\caption{Informacje o jądrze systemu}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=12cm]{1_1_2}
+	\caption{Fragment witryny www.kernel.org}
+\end{figure}
+
+Pobrano najnowszą wersję jądra, uprzednio wchodząc do katalogu \verb|/usr/src|
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{1_2}
+	\caption{Pobieranie jądra systemu w wersji 5.18.3}
+\end{figure}
+
+Rozpakowano pobrane archiwum z użyciem komendy \verb*|tar -xpf linux-5.18.3.tar.xz|
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{1_3}
+	\caption{Rozpakowywanie archiwum z pobranym jądrem systemu}
+\end{figure}
+
+
+\chapter{Przebieg procesu kompilacji dla starej metody}
+
+Po wejściu w katalog \verb*|linux-5.18.3| wykonano kopię konfiguracji starego jądra. W tym celu wykorzystano komendę \verb*|zcat /proc/config.gz > .config|. Rezultat komendy \verb*|ls -la| potwierdza poprawne skopiowanie pliku konfiguracyjnego (zaznaczono plik na zrzucie ekranu).
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{2_1}
+	\caption{Kopiowanie pliku konfiguracyjnego}
+\end{figure}
+
+Następnie z użyciem komendy \verb*|make localmodconfig| przygotowano plik konfiguracyjny. W każdym pojawiającym się komunikacie ustawiono wartość domyślną danego parametru klikając klawisz \verb*|ENTER|.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{2_2}
+	\caption{Rezultat komendy przygotowującej plik konfiguracyjny}
+\end{figure}
+
+Przystąpiono do procesu kompilacji jądra. Wykorzystano komendę \verb*|make -j4 bzImage|.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{2_3}
+	\caption{Wywołanie komendy rozpoczynającej proces kompilacji jądra}
+\end{figure}
+
+Po około 15 minutach proces kompilacji jądra zakończył się pomyślnie. Na standardowym wyjściu widnieje ścieżka do obrazu jądra: \verb*|arch/x86/boot/bzImage|.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{2_4}
+	\caption{Końcowy rezultat komendy wywołującej proces kompilacji jądra}
+\end{figure}
+
+Kolejno zbudowano moduły jądra. Wywołano komendę \verb*|make -j4 modules|.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{2_5}
+	\caption{Wywołanie komendy budującej modułów jądra}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{2_6}
+	\caption{Końcowy rezultat komendy budującej moduły jądra}
+\end{figure}
+
+Proces zakończył się pomyślnie po około 2 minutach. Kolejno przystąpiono do procesu instalacji modułów, co wykonano z pomocą komendy \verb*|make -j4 modules install|.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{2_7}
+	\caption{Instalacja modułów}
+\end{figure}
+
+Kolejnym etapem było kopiowanie plików nowego jądra do katalogu boot z użyciem poniższych komend:
+\begin{itemize}
+	\item obraz jądra: \verb*|cp arch/x86/boot/bzImage /boot/vmlinuz-method1-5.18.3-smp|
+	\item plik konfiguracyjny: \verb*|cp .config /boot/config-method1-5.18.3-smp|
+	\item tablica symboli: \verb*|cp System.map /boot/System.map-method1-5.18.3-smp|
+\end{itemize}
+gdzie \verb*|method1| jest oznaczeniem aktualnie wykonywanej metody kompilacji jądra, a \verb*|5.18.3-smp| wersją jądra.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{2_8}
+	\caption{Kopiowanie plików jądra do katalogu boot}
+\end{figure}
+
+Kolejnym etapem jest utworzenie linku symbolicznego: do pliku \verb*|System.map| z katalogu \verb*|/boot| należy dołączyć uprzednio skopiowany plik \verb*|System.map-method1-5.18.3-smp|.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{2_9}
+	\caption{Tworzenie symbolicznego linku do pliku System.map}
+\end{figure}
+
+W celu skonfigurowania RAMDISK, z użyciem skryptu \verb*|mkinitrd_command_generator.sh| wygenerowano stosowną komendę, którą później wykonano: \\
+ \verb*|mkinitrd -c -k 5.18.3-smp -f ext4 -r /dev/sda1 -m ext4 -u -o /boot/initrd.gz|.
+ W komendzie zmieniono nazwę pliku wyjściowego na taką, która zachowa spójność z poprzednio skopiowanymi plikami jądra.
+ \begin{figure}[H]
+ 	\centering
+ 	\includegraphics[width=15cm]{2_10}
+ 	\caption{Tworzenie RAMDISK}
+ \end{figure}
+ 
+ Następnie wykonano konfiguracją bootloadera \verb*|LILO|. W tym celu edytowano plik konfiguracyjny \verb*|/etc/lilo.conf| zamieszczając w nim nowy wpis.
+  \begin{figure}[H]
+  	\centering
+  	\includegraphics[width=15cm]{2_11}
+  	\caption{Edycja lilo.conf}
+  \end{figure}
+  Zmiany wprowadzone do pliku konfiguracyjnego zostały zatwierdzone poprzez wywołanie komendy \verb*|lilo|:
+    \begin{figure}[H]
+    	\centering
+    	\includegraphics[width=15cm]{2_12}
+    	\caption{Wywołanie komendy lilo}
+    \end{figure}
+    
+    Po zrestartowaniu systemu w boot menu pojawiła się opcja \verb*|method1|. System pomyślnie uruchomił się oraz pomyślnie zalogowano się na użytkownika \verb*|root|.
+    
+    \begin{figure}[H]
+       	\centering
+       	\includegraphics[width=15cm]{2_13}
+       	\caption{Boot menu po restarcie systemu}
+    \end{figure}
+        
+    \begin{figure}[H]
+          	\centering
+          	\includegraphics[width=15cm]{2_14}
+          	\caption{Pomyślne logowanie oraz start systemu}
+    \end{figure}
+    
+    Po sprawdzeniu wersji jądra otrzymano rezultat \verb*|5.18.3-smp| zgodny z oczekiwaniami.
+    \begin{figure}[H]
+         	\centering
+         	\includegraphics[width=15cm]{2_15}
+         	\caption{Aktualna wersja jądra}
+    \end{figure}
+
+
+\chapter{Przebieg procesu kompilacji dla nowej metody}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{1_1}
+	\caption{:D}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{1_1}
+	\caption{:D}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{1_1}
+	\caption{:D}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{1_1}
+	\caption{:D}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{1_1}
+	\caption{:D}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{1_1}
+	\caption{:D}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{1_1}
+	\caption{:D}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{1_1}
+	\caption{:D}
+\end{figure}
+
+\end{document}          
