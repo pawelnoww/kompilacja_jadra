@@ -18,6 +18,9 @@
 \title{Kompilacja jądra}
 \author{Paweł Nowak}
 
+% listing
+\usepackage{listings}
+
 
 \begin{document}
 \maketitle
@@ -168,56 +171,190 @@ W celu skonfigurowania RAMDISK, z użyciem skryptu \verb*|mkinitrd_command_gener
          	\includegraphics[width=15cm]{2_15}
          	\caption{Aktualna wersja jądra}
     \end{figure}
+    
+    Archiwum ze zmodyfikowanymi plikami jądra zostało spakowane oraz przeniesione z użyciem następujących komend:
+    \\ \noindent
+    \verb*|zip -r method1.zip linux-5.18.3/| \\
+    \verb*|scp -P 22 root@192.168.56.101:/usr/src/method1.zip .|
+    
 
 
 \chapter{Przebieg procesu kompilacji dla nowej metody}
 
+Rozpoczęto pracę na wcześniej przygotowanym archiwum z jądrem systemu Linux. Postępowano zgodnie z zaleceniami zamieszczonymi w pliku \verb*|srcipts/kconfig/streamline_config.pl|:
+
+\begin{lstlisting}[basicstyle=\tiny]
+# Howto:
+#
+#  1. Boot up the kernel that you want to stream line the config on.
+#  2. Change directory to the directory holding the source of the
+#       kernel that you just booted.
+#  3. Copy the configuration file to this directory as .config
+#  4. Have all your devices that you need modules for connected and
+#      operational (make sure that their corresponding modules are loaded)
+#  5. Run this script redirecting the output to some other file
+#       like config_strip.
+#  6. Back up your old config (if you want too).
+#  7. copy the config_strip file to .config
+#  8. Run "make oldconfig"
+#
+#  Now your kernel is ready to be built with only the modules that
+#  are loaded.
+#
+# Here's what I did with my Debian distribution.
+#
+#    cd /usr/src/linux-2.6.10
+#    cp /boot/config-2.6.10-1-686-smp .config
+#    ~/bin/streamline_config > config_strip
+#    mv .config config_sav
+#    mv config_strip .config
+#    make oldconfig
+\end{lstlisting}
+
+Na początku skopiowano plik \verb*|.config| do aktualnego katalogu roboczego.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{1_1}
-	\caption{:D}
+	\includegraphics[width=15cm]{3_1}
+	\caption{Kopiowanie pliku .config}
+\end{figure}
+
+Kolejno wykonano skrypt \verb*|streamline_config.pl| przekazując go do pliku \verb*|config_strip| zgodnie z instrukcją.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{3_2}
+	\caption{Wykonanie skryptu streamline\_config.pl}
+\end{figure}
+
+Stworzono plik \verb*|.config.bak| będący kopią zapasową pliku \verb*|.config|.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{3_3}
+	\caption{Kopiowanie pliku .config - kopia zapasowa}
+\end{figure}
+
+Podmieniono wcześniej utworzony plik \verb*|config_strip| z plikiem \verb*|.config|.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{3_4}
+	\caption{Podmiana pliku config\_strip}
+\end{figure}
+
+Kolejno, zgodnie z zaleceniami, wywołano komendę \verb*|make oldconfig|. W przypadku ponad 50 zapytań o parametr wskazano wartość domyślną klawiszem \verb*|ENTER|.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{3_5}
+	\caption{Wywołanie komendy make oldconfig}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{1_1}
-	\caption{:D}
+	\includegraphics[width=15cm]{3_6}
+	\caption{Rezultat końcowy komendy make oldconfig}
 \end{figure}
 
+Wykonano komendę \verb*|make bzImage| kompilującą jądro.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{1_1}
-	\caption{:D}
+	\includegraphics[width=15cm]{3_7}
+	\caption{Wywołanie kompilacji jądra}
 \end{figure}
 
+Po niespełna 15 minutach ukończono kompilację z powodzeniem.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{1_1}
-	\caption{:D}
+	\includegraphics[width=15cm]{3_8}
+	\caption{Zakończenie kompilacji jądra}
 \end{figure}
 
+Przystąpiono do kompilacji modułów z wykorzystaniem komendy \verb*|make modules|.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{1_1}
-	\caption{:D}
+	\includegraphics[width=15cm]{3_9}
+	\caption{Wywołanie kompilacji modułów}
 \end{figure}
 
+Po około 2 minutach kompilacja modułów zakończyła się powodzeniem.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{1_1}
-	\caption{:D}
+	\includegraphics[width=15cm]{3_10}
+	\caption{Zakończenie kompilacji modułów}
 \end{figure}
 
+Kolejnym etapem było kopiowanie plików nowego jądra do katalogu boot z użyciem poniższych komend:
+\begin{itemize}
+	\item obraz jądra: \verb*|cp arch/x86/boot/bzImage /boot/vmlinuz-method2-5.18.3-smp|
+	\item plik konfiguracyjny: \verb*|cp .config /boot/config-method2-5.18.3-smp|
+	\item tablica symboli: \verb*|cp System.map /boot/System.map-method2-5.18.3-smp|
+\end{itemize}
+gdzie \verb*|method2| jest oznaczeniem aktualnie wykonywanej metody kompilacji jądra, a \verb*|5.18.3-smp| wersją jądra.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{1_1}
-	\caption{:D}
+	\includegraphics[width=15cm]{3_11}
+	\caption{Kopiowanie plików jądra do katalogu /boot}
 \end{figure}
 
+Kolejno, po otworzeniu katalogu \verb*|\boot|, skasowano stary plik \verb*|System.map| oraz utworzono odpowiedni link symboliczny.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{1_1}
-	\caption{:D}
+	\includegraphics[width=15cm]{3_12}
+	\caption{Tworzenie linku symbolicznego do System.map}
 \end{figure}
+
+Następnie wygenerowano stosowną komendę do utworzenia RAMDISK, którą wykonano modyfikując nazwę pliku na taką, która zachowa spójność ze wcześniejszymi plikami - dodano nazwę metody oraz wersję jądra.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{3_13}
+	\caption{Tworzenie RAMDISK}
+\end{figure}
+
+Kolejnym etapem było dodanie wpisu do pliku \verb*|/etc/lilo.conf|.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{3_14}
+	\caption{Edycja lilo.conf}
+\end{figure}
+
+Po zmodyfikowania wcześniej wspomnianego pliku, zatwierdzono zmiany wywołując komendę \verb*|lilo|.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{3_15}
+	\caption{Zatwierdzenie zmian w LILO}
+	\label{error}
+\end{figure}
+
+Przy rebootowaniu systemu wbrew oczekiwaniom nie ukazała sie dostępna opcja \verb*|method2|. Po krótkiej analizie dotychczasowej dokumentacji (zrzutów ekranu) udało się zidentyfikować błąd: na zrzucie \ref{error} na standardowym wyjściu pojawiła się informacja o braku pliku \verb*|/boot/initrd-method2-5.18.3-smp|. W celu szerszego rozpoznania błędu i naprawy wykonano następujące czynności:
+\begin{itemize}
+	\item Sprawdzono, czy prawidłowa ścieżka znajduje się w pliku lilo.conf
+	\item Wylistowano katalog \verb*|/boot| - zauważono błędną nazwę pliku \verb*|initrd|
+	\item Zmieniono nazwę pliku \verb*|initrd| na poprawną
+	\item Powtórnie wykonano komendę \verb*|lilo|
+\end{itemize}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{3_16}
+	\caption{Naprawa błędu}
+\end{figure}
+
+Po poprawieniu błędu przystąpiono ponownie do rebootu systemu. Tym razem w boot menu ukazała się etykieta \verb*|method2|.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{3_17}
+	\caption{Boot menu}
+\end{figure}
+
+Udało się pomyślnie zalogować do systemu oraz została wyświetlona informacja o wersji jądra.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{3_18}
+	\caption{Pomyślne logowanie do systemu}
+\end{figure}
+
+Stworzono archiwum \verb*|method2.zip| zawierające pliki jądra dla drugiej metody. Pliki zostały skopiowane do innego systemu analogicznie do sposobu zaprezentowanego w rozdziale z pierwszą metodą kompilacji jądra.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{3_19}
+	\caption{Tworzenie archiwum}
+\end{figure}
+
 
 \end{document}          

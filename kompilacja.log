@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.22)  9 JUN 2022 14:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.22)  10 JUN 2022 18:26
 entering extended mode
 **./kompilacja.tex
 (kompilacja.tex
@@ -157,30 +157,55 @@ File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 \Gin@req@height=\dimen147
 \Gin@req@width=\dimen148
 )
+(C:\Users\Pawel\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count188
+\lst@gtempboxa=\box49
+\lst@token=\toks19
+\lst@length=\count189
+\lst@currlwidth=\dimen149
+\lst@column=\count190
+\lst@pos=\count191
+\lst@lostspace=\dimen150
+\lst@width=\dimen151
+\lst@newlines=\count192
+\lst@lineno=\count193
+\lst@maxwidth=\dimen152
+
+(C:\Users\Pawel\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count194
+\lst@skipnumbers=\count195
+\lst@framebox=\box50
+)
+(C:\Users\Pawel\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+
 (C:\Users\Pawel\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
-\l__kernel_color_stack_int=\count188
-\l__pdf_internal_box=\box49
+\l__kernel_color_stack_int=\count196
+\l__pdf_internal_box=\box51
 ) (kompilacja.aux)
 \openout1 = `kompilacja.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -220,17 +245,17 @@ LaTeX Font Info:    ... okay on input line 22.
 (C:\Users\Pawel\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count189
-\scratchdimen=\dimen149
-\scratchbox=\box50
-\nofMPsegments=\count190
-\nofMParguments=\count191
-\everyMPshowfont=\toks19
-\MPscratchCnt=\count192
-\MPscratchDim=\dimen150
-\MPnumerator=\count193
-\makeMPintoPDFobject=\count194
-\everyMPtoPDFconversion=\toks20
+\scratchcounter=\count197
+\scratchdimen=\dimen153
+\scratchbox=\box52
+\nofMPsegments=\count198
+\nofMParguments=\count199
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count266
+\MPscratchDim=\dimen154
+\MPnumerator=\count267
+\makeMPintoPDFobject=\count268
+\everyMPtoPDFconversion=\toks21
 )
 (C:\Users\Pawel\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
@@ -238,30 +263,31 @@ Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 )
+\c@lstlisting=\count269
 LaTeX Font Info:    Trying to load font information for OML+plm on input line 2
-3.
+6.
 
 (C:\Users\Pawel\AppData\Local\Programs\MiKTeX\tex/latex/polski\omlplm.fd
 File: omlplm.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 LaTeX Font Info:    Trying to load font information for OMS+plsy on input line 
-23.
+26.
 
 (C:\Users\Pawel\AppData\Local\Programs\MiKTeX\tex/latex/polski\omsplsy.fd
 File: omsplsy.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 LaTeX Font Info:    Trying to load font information for OMX+plex on input line 
-23.
+26.
 
 (C:\Users\Pawel\AppData\Local\Programs\MiKTeX\tex/latex/polski\omxplex.fd
 File: omxplex.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <14.4> on input line 23.
+(Font)              <14.4> on input line 26.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <10> on input line 23.
+(Font)              <10> on input line 26.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <7> on input line 23.
+(Font)              <7> on input line 26.
 
 [1
 
@@ -269,197 +295,290 @@ LaTeX Font Info:    External font `plex10' loaded for size
 {C:/Users/Pawel/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
 Rozdzia\PlPrIeC {\l } 1.
 LaTeX Font Info:    Trying to load font information for OT4+cmtt on input line 
-27.
+30.
 (C:\Users\Pawel\AppData\Local\Programs\MiKTeX\tex/latex/polski\ot4cmtt.fd
 File: ot4cmtt.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-<figures//1_1.png, id=7, 607.51968pt x 140.77594pt>
+<figures//1_1.png, id=7, 607.51968pt x 64.74188pt>
 File: figures//1_1.png Graphic file (type png)
 <use figures//1_1.png>
-Package pdftex.def Info: figures//1_1.png  used on input line 30.
-(pdftex.def)             Requested size: 341.43306pt x 79.11966pt.
-<figures//1_1_2.png, id=8, 624.08156pt x 271.0125pt>
+Package pdftex.def Info: figures//1_1.png  used on input line 33.
+(pdftex.def)             Requested size: 341.43306pt x 36.38658pt.
+<figures//1_1_2.png, id=9, 624.08156pt x 271.0125pt>
 File: figures//1_1_2.png Graphic file (type png)
 <use figures//1_1_2.png>
-Package pdftex.def Info: figures//1_1_2.png  used on input line 36.
+Package pdftex.def Info: figures//1_1_2.png  used on input line 39.
 (pdftex.def)             Requested size: 341.43306pt x 148.27162pt.
-<figures//1_2.png, id=10, 676.77844pt x 331.2375pt>
+<figures//1_2.png, id=10, 676.77844pt x 177.66376pt>
 File: figures//1_2.png Graphic file (type png)
 <use figures//1_2.png>
-Package pdftex.def Info: figures//1_2.png  used on input line 43.
-(pdftex.def)             Requested size: 426.79134pt x 208.89299pt.
+Package pdftex.def Info: figures//1_2.png  used on input line 46.
+(pdftex.def)             Requested size: 426.79134pt x 112.0426pt.
 
 [1
 
  <./figures//1_1.png> <./figures//1_1_2.png>]
-<figures//1_3.png, id=17, 676.77844pt x 331.2375pt>
+<figures//1_3.png, id=18, 676.77844pt x 83.5622pt>
 File: figures//1_3.png Graphic file (type png)
 <use figures//1_3.png>
-Package pdftex.def Info: figures//1_3.png  used on input line 50.
-(pdftex.def)             Requested size: 426.79134pt x 208.89299pt.
+Package pdftex.def Info: figures//1_3.png  used on input line 53.
+(pdftex.def)             Requested size: 426.79134pt x 52.698pt.
  [2 <./figures//1_2.png> <./figures//1_3.png>]
 Rozdzia\PlPrIeC {\l } 2.
-<figures//2_1.png, id=21, 679.03688pt x 331.2375pt>
+<figures//2_1.png, id=24, 679.03688pt x 331.2375pt>
 File: figures//2_1.png Graphic file (type png)
 <use figures//2_1.png>
-Package pdftex.def Info: figures//2_1.png  used on input line 60.
+Package pdftex.def Info: figures//2_1.png  used on input line 63.
 (pdftex.def)             Requested size: 426.79134pt x 208.19046pt.
-<figures//2_2.png, id=22, 679.03688pt x 331.2375pt>
+<figures//2_2.png, id=25, 679.03688pt x 331.2375pt>
 File: figures//2_2.png Graphic file (type png)
 <use figures//2_2.png>
-Package pdftex.def Info: figures//2_2.png  used on input line 67.
+Package pdftex.def Info: figures//2_2.png  used on input line 70.
 (pdftex.def)             Requested size: 426.79134pt x 208.19046pt.
 [3
 
  <./figures//2_1.png>]
-<figures//2_3.png, id=26, 679.03688pt x 331.2375pt>
+<figures//2_3.png, id=29, 679.03688pt x 76.03406pt>
 File: figures//2_3.png Graphic file (type png)
 <use figures//2_3.png>
-Package pdftex.def Info: figures//2_3.png  used on input line 74.
-(pdftex.def)             Requested size: 426.79134pt x 208.19046pt.
-<figures//2_4.png, id=27, 679.03688pt x 331.2375pt>
+Package pdftex.def Info: figures//2_3.png  used on input line 77.
+(pdftex.def)             Requested size: 426.79134pt x 47.78915pt.
+<figures//2_4.png, id=30, 679.03688pt x 331.2375pt>
 File: figures//2_4.png Graphic file (type png)
 <use figures//2_4.png>
-Package pdftex.def Info: figures//2_4.png  used on input line 81.
+Package pdftex.def Info: figures//2_4.png  used on input line 84.
 (pdftex.def)             Requested size: 426.79134pt x 208.19046pt.
  [4 <./figures//2_2.png> <./figures//2_3.png>]
-<figures//2_5.png, id=31, 679.03688pt x 331.2375pt>
+<figures//2_5.png, id=35, 679.03688pt x 131.74219pt>
 File: figures//2_5.png Graphic file (type png)
 <use figures//2_5.png>
-Package pdftex.def Info: figures//2_5.png  used on input line 89.
-(pdftex.def)             Requested size: 426.79134pt x 208.19046pt.
-<figures//2_6.png, id=32, 679.03688pt x 331.2375pt>
+Package pdftex.def Info: figures//2_5.png  used on input line 92.
+(pdftex.def)             Requested size: 426.79134pt x 82.80301pt.
+<figures//2_6.png, id=36, 679.03688pt x 331.2375pt>
 File: figures//2_6.png Graphic file (type png)
 <use figures//2_6.png>
-Package pdftex.def Info: figures//2_6.png  used on input line 95.
+Package pdftex.def Info: figures//2_6.png  used on input line 98.
 (pdftex.def)             Requested size: 426.79134pt x 208.19046pt.
  [5 <./figures//2_4.png> <./figures//2_5.png>]
-<figures//2_7.png, id=36, 677.53125pt x 331.2375pt>
+<figures//2_7.png, id=41, 677.53125pt x 331.2375pt>
 File: figures//2_7.png Graphic file (type png)
 <use figures//2_7.png>
-Package pdftex.def Info: figures//2_7.png  used on input line 103.
+Package pdftex.def Info: figures//2_7.png  used on input line 106.
 (pdftex.def)             Requested size: 426.79134pt x 208.6605pt.
  [6 <./figures//2_6.png> <./figures//2_7.png>]
-Overfull \hbox (9.33157pt too wide) in paragraph at lines 113--114
+Overfull \hbox (9.33157pt too wide) in paragraph at lines 116--117
 \OT4/cmr/m/n/12 gdzie [][]\OT4/cmtt/m/n/12 method1 []\OT4/cmr/m/n/12 jest ozna-
 cze-niem ak-tu-al-nie wy-ko-ny-wa-nej me-to-dy kom-pi-la-cji j¡-dra, a [][]\OT4
 /cmtt/m/n/12 5.18.3-smp
  []
 
-<figures//2_8.png, id=42, 677.53125pt x 331.2375pt>
+<figures//2_8.png, id=47, 677.53125pt x 91.09032pt>
 File: figures//2_8.png Graphic file (type png)
 <use figures//2_8.png>
-Package pdftex.def Info: figures//2_8.png  used on input line 117.
-(pdftex.def)             Requested size: 426.79134pt x 208.6605pt.
-<figures//2_9.png, id=43, 677.53125pt x 331.2375pt>
+Package pdftex.def Info: figures//2_8.png  used on input line 120.
+(pdftex.def)             Requested size: 426.79134pt x 57.38162pt.
+<figures//2_9.png, id=48, 677.53125pt x 175.40532pt>
 File: figures//2_9.png Graphic file (type png)
 <use figures//2_9.png>
-Package pdftex.def Info: figures//2_9.png  used on input line 125.
-(pdftex.def)             Requested size: 426.79134pt x 208.6605pt.
-[7 <./figures//2_8.png>]
-<figures//2_10.png, id=47, 677.53125pt x 331.2375pt>
+Package pdftex.def Info: figures//2_9.png  used on input line 128.
+(pdftex.def)             Requested size: 426.79134pt x 110.49521pt.
+<figures//2_10.png, id=49, 677.53125pt x 231.11343pt>
 File: figures//2_10.png Graphic file (type png)
 <use figures//2_10.png>
-Package pdftex.def Info: figures//2_10.png  used on input line 134.
-(pdftex.def)             Requested size: 426.79134pt x 208.6605pt.
+Package pdftex.def Info: figures//2_10.png  used on input line 137.
+(pdftex.def)             Requested size: 426.79134pt x 145.58812pt.
 
-Overfull \hbox (3.17978pt too wide) in paragraph at lines 129--136
+Overfull \hbox (3.17978pt too wide) in paragraph at lines 132--139
 []\OT4/cmr/m/n/12 W ce-lu skon-fi-gu-ro-wa-nia RAM-DISK, z u»y-ciem skryp-tu []
 []\OT4/cmtt/m/n/12 mkinitrd_command_generator.sh
  []
 
 
-Overfull \hbox (0.53285pt too wide) in paragraph at lines 129--136
+Overfull \hbox (0.53285pt too wide) in paragraph at lines 132--139
 [][]\OT4/cmtt/m/n/12 mkinitrd -c -k 5.18.3-smp -f ext4 -r /dev/sda1 -m ext4 -u 
 -o /boot/initrd.gz[]\OT4/cmr/m/n/12 .
  []
 
-<figures//2_11.png, id=48, 677.53125pt x 331.2375pt>
+[7 <./figures//2_8.png> <./figures//2_9.png>]
+<figures//2_11.png, id=55, 677.53125pt x 331.2375pt>
 File: figures//2_11.png Graphic file (type png)
 <use figures//2_11.png>
-Package pdftex.def Info: figures//2_11.png  used on input line 141.
+Package pdftex.def Info: figures//2_11.png  used on input line 144.
 (pdftex.def)             Requested size: 426.79134pt x 208.6605pt.
-[8 <./figures//2_9.png> <./figures//2_10.png>]
-<figures//2_12.png, id=53, 679.03688pt x 331.2375pt>
+<figures//2_12.png, id=56, 679.03688pt x 151.3153pt>
 File: figures//2_12.png Graphic file (type png)
 <use figures//2_12.png>
-Package pdftex.def Info: figures//2_12.png  used on input line 147.
-(pdftex.def)             Requested size: 426.79134pt x 208.19046pt.
-<figures//2_13.png, id=54, 488.57532pt x 421.575pt>
+Package pdftex.def Info: figures//2_12.png  used on input line 150.
+(pdftex.def)             Requested size: 426.79134pt x 95.10518pt.
+ [8 <./figures//2_10.png> <./figures//2_11.png>]
+<figures//2_13.png, id=61, 488.57532pt x 421.575pt>
 File: figures//2_13.png Graphic file (type png)
 <use figures//2_13.png>
-Package pdftex.def Info: figures//2_13.png  used on input line 155.
+Package pdftex.def Info: figures//2_13.png  used on input line 158.
 (pdftex.def)             Requested size: 426.79134pt x 368.2661pt.
- [9 <./figures//2_11.png> <./figures//2_12.png>]
-<figures//2_14.png, id=58, 771.63281pt x 635.37375pt>
+<figures//2_14.png, id=62, 771.63281pt x 635.37375pt>
 File: figures//2_14.png Graphic file (type png)
 <use figures//2_14.png>
-Package pdftex.def Info: figures//2_14.png  used on input line 161.
+Package pdftex.def Info: figures//2_14.png  used on input line 164.
 (pdftex.def)             Requested size: 426.79134pt x 351.42473pt.
- [10 <./figures//2_13.png>]
-<figures//2_15.png, id=62, 771.63281pt x 115.93312pt>
+ [9 <./figures//2_12.png> <./figures//2_13.png>]
+<figures//2_15.png, id=67, 771.63281pt x 115.93312pt>
 File: figures//2_15.png Graphic file (type png)
 <use figures//2_15.png>
-Package pdftex.def Info: figures//2_15.png  used on input line 168.
+Package pdftex.def Info: figures//2_15.png  used on input line 171.
 (pdftex.def)             Requested size: 426.79134pt x 64.12251pt.
- [11 <./figures//2_14.png> <./figures//2_15.png>]
+ [10 <./figures//2_14.png> <./figures//2_15.png>]
 Rozdzia\PlPrIeC {\l } 3.
-File: figures//1_1.png Graphic file (type png)
-<use figures//1_1.png>
-Package pdftex.def Info: figures//1_1.png  used on input line 177.
-(pdftex.def)             Requested size: 426.79134pt x 98.89905pt.
-File: figures//1_1.png Graphic file (type png)
-<use figures//1_1.png>
-Package pdftex.def Info: figures//1_1.png  used on input line 183.
-(pdftex.def)             Requested size: 426.79134pt x 98.89905pt.
-File: figures//1_1.png Graphic file (type png)
-<use figures//1_1.png>
-Package pdftex.def Info: figures//1_1.png  used on input line 189.
-(pdftex.def)             Requested size: 426.79134pt x 98.89905pt.
-[12
 
-]
-File: figures//1_1.png Graphic file (type png)
-<use figures//1_1.png>
-Package pdftex.def Info: figures//1_1.png  used on input line 195.
-(pdftex.def)             Requested size: 426.79134pt x 98.89905pt.
-File: figures//1_1.png Graphic file (type png)
-<use figures//1_1.png>
-Package pdftex.def Info: figures//1_1.png  used on input line 201.
-(pdftex.def)             Requested size: 426.79134pt x 98.89905pt.
-File: figures//1_1.png Graphic file (type png)
-<use figures//1_1.png>
-Package pdftex.def Info: figures//1_1.png  used on input line 207.
-(pdftex.def)             Requested size: 426.79134pt x 98.89905pt.
-File: figures//1_1.png Graphic file (type png)
-<use figures//1_1.png>
-Package pdftex.def Info: figures//1_1.png  used on input line 213.
-(pdftex.def)             Requested size: 426.79134pt x 98.89905pt.
- [13]
-File: figures//1_1.png Graphic file (type png)
-<use figures//1_1.png>
-Package pdftex.def Info: figures//1_1.png  used on input line 219.
-(pdftex.def)             Requested size: 426.79134pt x 98.89905pt.
- [14] (kompilacja.aux) ) 
+Overfull \hbox (16.33833pt too wide) in paragraph at lines 184--185
+\OT4/cmr/m/n/12 wa-no zgod-nie z za-le-ce-nia-mi za-miesz-czo-ny-mi w pli-ku []
+[]\OT4/cmtt/m/n/12 srcipts/kconfig/streamline_config.pl[]\OT4/cmr/m/n/12 : 
+ []
+
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 2
+08.
+(C:\Users\Pawel\AppData\Local\Programs\MiKTeX\tex/latex/base\omlcmr.fd
+File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <6> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 208.
+<figures//3_1.png, id=71, 737.00343pt x 70.76437pt>
+File: figures//3_1.png Graphic file (type png)
+<use figures//3_1.png>
+Package pdftex.def Info: figures//3_1.png  used on input line 217.
+(pdftex.def)             Requested size: 426.79134pt x 40.97856pt.
+<figures//3_2.png, id=72, 737.00343pt x 91.84312pt>
+File: figures//3_2.png Graphic file (type png)
+<use figures//3_2.png>
+Package pdftex.def Info: figures//3_2.png  used on input line 224.
+(pdftex.def)             Requested size: 426.79134pt x 53.18495pt.
+
+[11
+
+ <./figures//3_1.png>]
+<figures//3_3.png, id=80, 737.00343pt x 86.57344pt>
+File: figures//3_3.png Graphic file (type png)
+<use figures//3_3.png>
+Package pdftex.def Info: figures//3_3.png  used on input line 231.
+(pdftex.def)             Requested size: 426.79134pt x 50.13335pt.
+<figures//3_4.png, id=81, 737.00343pt x 87.32625pt>
+File: figures//3_4.png Graphic file (type png)
+<use figures//3_4.png>
+Package pdftex.def Info: figures//3_4.png  used on input line 238.
+(pdftex.def)             Requested size: 426.79134pt x 50.5693pt.
+<figures//3_5.png, id=82, 737.00343pt x 129.48375pt>
+File: figures//3_5.png Graphic file (type png)
+<use figures//3_5.png>
+Package pdftex.def Info: figures//3_5.png  used on input line 245.
+(pdftex.def)             Requested size: 426.79134pt x 74.98207pt.
+<figures//3_6.png, id=83, 737.00343pt x 269.50688pt>
+File: figures//3_6.png Graphic file (type png)
+<use figures//3_6.png>
+Package pdftex.def Info: figures//3_6.png  used on input line 251.
+(pdftex.def)             Requested size: 426.79134pt x 156.06735pt.
+ [12 <./figures//3_2.png> <./figures//3_3.png> <./figures//3_4.png> <./figures/
+/3_5.png>]
+<figures//3_7.png, id=92, 737.00343pt x 88.83188pt>
+File: figures//3_7.png Graphic file (type png)
+<use figures//3_7.png>
+Package pdftex.def Info: figures//3_7.png  used on input line 258.
+(pdftex.def)             Requested size: 426.79134pt x 51.44118pt.
+<figures//3_8.png, id=93, 737.00343pt x 269.50688pt>
+File: figures//3_8.png Graphic file (type png)
+<use figures//3_8.png>
+Package pdftex.def Info: figures//3_8.png  used on input line 265.
+(pdftex.def)             Requested size: 426.79134pt x 156.06735pt.
+<figures//3_9.png, id=94, 737.00343pt x 76.03406pt>
+File: figures//3_9.png Graphic file (type png)
+<use figures//3_9.png>
+Package pdftex.def Info: figures//3_9.png  used on input line 272.
+(pdftex.def)             Requested size: 426.79134pt x 44.03015pt.
+ [13 <./figures//3_6.png> <./figures//3_7.png> <./figures//3_8.png>]
+<figures//3_10.png, id=99, 737.00343pt x 269.50688pt>
+File: figures//3_10.png Graphic file (type png)
+<use figures//3_10.png>
+Package pdftex.def Info: figures//3_10.png  used on input line 279.
+(pdftex.def)             Requested size: 426.79134pt x 156.06735pt.
+<figures//3_11.png, id=100, 737.00343pt x 97.86563pt>
+File: figures//3_11.png Graphic file (type png)
+<use figures//3_11.png>
+Package pdftex.def Info: figures//3_11.png  used on input line 292.
+(pdftex.def)             Requested size: 426.79134pt x 56.67249pt.
+
+Overfull \hbox (9.33157pt too wide) in paragraph at lines 289--294
+\OT4/cmr/m/n/12 gdzie [][]\OT4/cmtt/m/n/12 method2 []\OT4/cmr/m/n/12 jest ozna-
+cze-niem ak-tu-al-nie wy-ko-ny-wa-nej me-to-dy kom-pi-la-cji j¡-dra, a [][]\OT4
+/cmtt/m/n/12 5.18.3-smp
+ []
+
+<figures//3_12.png, id=101, 737.00343pt x 91.09032pt>
+File: figures//3_12.png Graphic file (type png)
+<use figures//3_12.png>
+Package pdftex.def Info: figures//3_12.png  used on input line 299.
+(pdftex.def)             Requested size: 426.79134pt x 52.74901pt.
+[14 <./figures//3_9.png> <./figures//3_10.png> <./figures//3_11.png>]
+<figures//3_13.png, id=108, 737.00343pt x 226.59656pt>
+File: figures//3_13.png Graphic file (type png)
+<use figures//3_13.png>
+Package pdftex.def Info: figures//3_13.png  used on input line 306.
+(pdftex.def)             Requested size: 426.79134pt x 131.21863pt.
+<figures//3_14.png, id=109, 737.00343pt x 269.50688pt>
+File: figures//3_14.png Graphic file (type png)
+<use figures//3_14.png>
+Package pdftex.def Info: figures//3_14.png  used on input line 313.
+(pdftex.def)             Requested size: 426.79134pt x 156.06735pt.
+<figures//3_15.png, id=110, 737.00343pt x 131.74219pt>
+File: figures//3_15.png Graphic file (type png)
+<use figures//3_15.png>
+Package pdftex.def Info: figures//3_15.png  used on input line 320.
+(pdftex.def)             Requested size: 426.79134pt x 76.2899pt.
+ [15 <./figures//3_12.png> <./figures//3_13.png> <./figures//3_14.png>]
+<figures//3_16.png, id=116, 776.14969pt x 589.4522pt>
+File: figures//3_16.png Graphic file (type png)
+<use figures//3_16.png>
+Package pdftex.def Info: figures//3_16.png  used on input line 334.
+(pdftex.def)             Requested size: 426.79134pt x 324.13675pt.
+ [16 <./figures//3_15.png>]
+<figures//3_17.png, id=121, 489.32813pt x 420.06938pt>
+File: figures//3_17.png Graphic file (type png)
+<use figures//3_17.png>
+Package pdftex.def Info: figures//3_17.png  used on input line 341.
+(pdftex.def)             Requested size: 426.79134pt x 366.39323pt.
+ [17 <./figures//3_16.png>]
+<figures//3_18.png, id=125, 578.91281pt x 124.96687pt>
+File: figures//3_18.png Graphic file (type png)
+<use figures//3_18.png>
+Package pdftex.def Info: figures//3_18.png  used on input line 348.
+(pdftex.def)             Requested size: 426.79134pt x 92.12889pt.
+<figures//3_19.png, id=126, 496.85625pt x 131.74219pt>
+File: figures//3_19.png Graphic file (type png)
+<use figures//3_19.png>
+Package pdftex.def Info: figures//3_19.png  used on input line 355.
+(pdftex.def)             Requested size: 426.79134pt x 113.16539pt.
+ [18 <./figures//3_17.png> <./figures//3_18.png>] [19 <./figures//3_19.png>] (k
+ompilacja.aux) ) 
 Here is how much of TeX's memory you used:
- 2169 strings out of 480236
- 33093 string characters out of 2880557
- 302431 words of memory out of 3000000
- 18719 multiletter control sequences out of 15000+200000
- 541708 words of font info for 46 fonts, out of 3000000 for 9000
+ 3877 strings out of 480236
+ 56498 string characters out of 2880557
+ 365652 words of memory out of 3000000
+ 20409 multiletter control sequences out of 15000+200000
+ 542901 words of font info for 49 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,6n,66p,343b,232s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Pawel\AppData\Local\MiKTeX\fonts/pk/ljfour/j
-knappen/ec/dpi600\tcrm1200.pk>{C:/Users/Pawel/AppData/Local/Programs/MiKTeX/fon
-ts/enc/dvips/pl/pltt.enc}{C:/Users/Pawel/AppData/Local/Programs/MiKTeX/fonts/en
-c/dvips/pl/plrm.enc}<C:/Users/Pawel/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/pl/plbx12.pfb><C:/Users/Pawel/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/pl/plr12.pfb><C:/Users/Pawel/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/pl/plr17.pfb><C:/Users/Pawel/AppData/Local/Programs/MiKTeX/fonts/type1/pub
-lic/pl/pltt12.pfb>
-Output written on kompilacja.pdf (15 pages, 397621 bytes).
+ 60i,6n,66p,456b,1275s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Pawel\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/
+ec/dpi600\tcrm0600.pk>{C:/Users/Pawel/AppData/Local/Programs/MiKTeX/fonts/enc/d
+vips/pl/plrm.enc} <C:\Users\Pawel\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen
+/ec/dpi600\tcrm1200.pk>{C:/Users/Pawel/AppData/Local/Programs/MiKTeX/fonts/enc/
+dvips/pl/pltt.enc}<C:/Users/Pawel/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/amsfonts/cm/cmmi6.pfb><C:/Users/Pawel/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/pl/plbx12.pfb><C:/Users/Pawel/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/pl/plr12.pfb><C:/Users/Pawel/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/pl/plr17.pfb><C:/Users/Pawel/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/public/pl/plr6.pfb><C:/Users/Pawel/AppData/Local/Programs/MiKTeX/fonts/type1
+/public/pl/pltt12.pfb>
+Output written on kompilacja.pdf (20 pages, 619178 bytes).
 PDF statistics:
- 96 PDF objects out of 1000 (max. 8388607)
+ 165 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 96 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 191 words of extra memory for PDF output out of 10000 (max. 10000000)
 
